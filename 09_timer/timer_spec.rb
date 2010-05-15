@@ -24,12 +24,13 @@ describe Timer do
     @timer.time_string.should == "00|01|06"
   end
 
-  it "should display 4000 seconds as 01|06|40" do
-    pending
+  it "should display 4000 seconds as 01|06|40" do    
     @timer.seconds = 4000
     @timer.time_string.should == "01|06|40"
   end
-
-
+ it "should display 6000 seconds as 01|40|00" do
+    @timer.seconds = 6000
+    @timer.time_string.should == "01|40|00"
+  end
 end
 
